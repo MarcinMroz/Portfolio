@@ -1,0 +1,383 @@
+body
+{
+font: 400 15px Lato, sans-serif;
+line-height: 1.8;
+color: #818181;
+background-image: url("low_contrast_linen.png");
+}
+
+a
+{
+    text-decoration: none;
+    outline: 0;
+}
+a:hover
+{
+    text-decoration: none !important;
+    outline: 0;
+}
+a:visited
+{
+    text-decoration: none !important;
+    outline: 0;
+}
+a:active
+{
+    text-decoration: none !important;
+    outline: 0;
+}
+
+a:focus
+{
+    outline: 0;
+}
+
+h2
+{
+font-size: 24px;
+text-transform: uppercase;
+color: #303030;
+font-weight: 600;
+margin-bottom: 30px;
+}
+
+h4
+{
+  font-size: 19px;
+  line-height: 1.375em;
+  color: #303030;
+  font-weight: 400;
+}
+
+.navbar
+{
+    margin-bottom: 0;
+    background-color: #5CA4A9;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+    letter-spacing: 1px;
+}
+
+.navbar li a, .navbar .navbar-brand
+{
+    color: #fff !important;
+    font-weight: bold;
+    float: left;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a
+{
+    color: #f4511e !important;
+    background-color: #fff !important;
+}
+
+.navbar-default .navbar-toggle
+{
+    border-color: transparent;
+    color: #fff !important;
+}
+
+.navbar-header
+{
+    
+}
+
+.logo
+{
+    float: left;
+}
+
+.container-fluid
+{
+    padding: 60px 50px;
+    font-size: 14px;
+}
+  
+.content
+{
+    /*background-color: white;
+    opacity: 1;*/
+    background-clip: padding-box;
+    border-style: solid;
+    border-width: 50px;
+    border-color: transparent;
+    padding: 0;
+      
+}
+
+.menu
+{
+    background-color: transparent;
+    opacity: 0.9;
+    background-clip: padding-box;
+    border-style: solid;
+    border-top-width: 50px;
+    border-right-width: 50px;
+    border-color: transparent;
+}
+
+.menu > ol
+{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    line-height: 200%;
+    display: inline-block;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.menu > ol > li:hover
+{
+    background-color: #303030;
+    color: white;
+}
+
+.menu > ol > li:active
+{
+    background-color: #303030;
+    color: red;
+}
+
+.dodaj
+{
+    background-color: #5CA4A9 !important;
+    color: white;
+    padding: 0 !important;
+    border: none;
+}
+
+.dodaj:hover
+{
+    background-color: #303030 !important;
+    color: white;
+}
+
+.dodaj>a
+{
+    background-color: #5CA4A9;
+    color: white;
+    padding: 0;
+    border: none;
+    width: auto;
+    height: 38px;
+    display: block;
+}
+
+.menu .dodaj:hover
+{
+    background-color: #303030;
+    color: white;
+}
+
+.menu > ol > li
+{
+    background-color: white;
+    padding: 5px 30px;
+    background-clip: padding-box;
+    border: 3px solid;
+    border-color: transparent;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+
+.notatki
+{
+    background-color: white;
+    background-clip: padding-box;
+    background-color: transparent;
+}
+
+.loginmod
+{
+top:15%;
+outline: none;
+}
+
+.button
+{
+    background-color: transparent;
+    color: white;
+    text-decoration: none !important;
+    outline: 0;
+}
+
+
+.button:active
+{
+    background-color: white;
+    color: #FE938C;
+    text-decoration: none !important;
+    outline: 0;
+}
+
+.nav-tabs>li
+{
+    background-color: transparent !important;
+    border: none;
+    font: 400 15px Lato, sans-serif;
+    color: #818181 !important;
+}
+
+.nav-tabs>li:active
+{
+    background-color: #FE938C !important;
+    border: none;
+    font: 400 15px Lato, sans-serif;
+    color: #818181 !important;
+}
+
+
+.nav-tabs>li.active>a
+{
+    background-color: #9BC1BC !important;;
+    border: none;
+    font: 400 15px Lato, sans-serif;
+    font-weight: bold;
+    color: white !important;
+}
+
+.nav-tabs>li.active>a:focus
+{
+    background-color: #9BC1BC !important;;
+    border: none;
+    font: 400 15px Lato, sans-serif;
+    font-weight: bold;
+    color: white !important;
+}
+
+.nav-tabs>li.active>a:hover 
+{
+    background-color: #9BC1BC !important;
+    border: none;
+    font: 400 15px Lato, sans-serif;
+    font-weight: bold;
+    color: white !important;
+    
+}
+
+#friendsBox
+{
+    margin-top: 30px;
+}
+
+.friend 
+{
+    text-align: left;
+    cursor: pointer;
+    color: #000;
+    font-size: 14px;
+    margin: 10px;
+    padding: 5px;
+}
+
+#friendsBox div:nth-of-type(n+0)
+{
+    background-color: lightsalmon;
+}
+#friendsBox div:nth-of-type(2n+0)
+{
+    background-color: lightblue;
+}
+#friendsBox div:nth-of-type(3n+0)
+{
+    background-color: lightcoral;
+}
+#friendsBox div:nth-of-type(4n+0)
+{
+    background-color: lightyellow;
+}
+#friendsBox div:nth-of-type(5n+0)
+{
+    background-color: lightgreen;
+}
+
+
+.friend > h1
+{
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+a.menu
+{
+    background-color: transparent;
+    opacity: 0.9;
+    background-clip: padding-box;
+    border-style: solid;
+    border-top-width: 50px;
+    border-right-width: 50px;
+    border-color: transparent;
+}
+
+a.menu > ol
+{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    line-height: 200%;
+    display: inline-block;
+    background-color: transparent;
+    font-weight: bold;
+    text-align: center;
+}
+
+a.menu > ol > li:hover
+{
+    background-color: #303030;
+    color: white;
+}
+
+a.menu > ol > li:active
+{
+    background-color: #303030;
+    color: red;
+    text-align: center;
+}
+
+a.menu .dodaj
+{
+    background-color: #FE938C;
+    color: white;
+}
+
+a.menu .dodaj:hover
+{
+    background-color: #303030;
+    color: #FE938C;
+}
+
+a.menu > ol > li
+{
+    background-color: white;
+    padding: 5px 30px;
+    background-clip: padding-box;
+    border: 3px solid;
+    border-color: transparent;
+    text-align: center !important;
+    display: block;
+    text-decoration: none;
+}
+.AddFriend
+{ 
+    display:none;
+}
+
+.element.style
+{
+    width: auto;
+}
+
+.error
+{
+    color: red;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
