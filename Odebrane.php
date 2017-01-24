@@ -77,12 +77,13 @@ $("#menu2").empty();
                  var button = 'draggable="false"';
              }
             var kolor = (val.label===1) ? 'red' : '';
+            var label  = (val.label===2) ? '#ff9999' : '#fff';
        
             if(val.owner === val.autor) val.autor = "";
             else val.autor = "Od: "+val.NazwaAutora;
             
             
-             $("#home").append('<table class = "note" id = "tabela-'+val.id+'" style="font-size:18px; background-color:#fff;margin: 10px 0;border-radius:5px"><tr style="cursor:pointer;" class="rozwin">'+
+             $("#home").append('<table class = "note" id = "tabela-'+val.id+'" style="font-size:18px; background-color:'+label+';margin: 10px 0;border-radius:5px"><tr style="cursor:pointer;" class="rozwin">'+
                         '<td style = "width:5%; font-size:20px; color: #247BA0">'+typ+'</td>'+
                         '<td style = "width:50%;">'+val.title+'</td>'+
                         '<td style = "width:20%;">'+val.autor+'</td>'+
@@ -100,7 +101,7 @@ $("#menu2").empty();
 
             //if(val.type===0)
             // {
-                  $(div_id).append('<table class = "note" id = "tabela-'+val.id+'" style="font-size:18px; background-color:#fff;margin: 10px 0;border-radius:5px"><tr style="cursor:pointer;" class="rozwin">'+
+                  $(div_id).append('<table class = "note" id = "tabela-'+val.id+'" style="font-size:18px; background-color:'+label+';margin: 10px 0;border-radius:5px"><tr style="cursor:pointer;" class="rozwin">'+
                         '<td style = "width:5%; font-size:20px; color: #247BA0">'+typ+'</td>'+
                         '<td style = "width:50%;">'+val.title+'</td>'+
                         '<td style = "width:20%;">'+val.autor+'</td>'+
@@ -112,7 +113,7 @@ $("#menu2").empty();
                          '<td colspan = "5" style = "width:3%; font-size:15px; background-color:#eee; text-align: right">'+
                          '<form action="usun.php" method="post" style = "display: inline-block;">   <input type = "hidden" id = "noteId" name = "noteId" value = "'+val.id+'"><button type="submit" name="name" title = "usuń" value="value" class="btn-link"><span class="glyphicon glyphicon-trash"></span></button></input></form>'+
                          '&nbsp; &nbsp; <form action="#" method="post"  style = "display: inline-block;" onsubmit="likeUnlike(this);return false;"><input type = "hidden" id = "noteId" name = "noteId" value = "'+val.id+'"><button type="submit" name="name" title = "dodaj do ulubionych" value="value" class="btn-link"><span class="glyphicon glyphicon-heart" style = "color:'+kolor+'"></span></button></form>'+
-                         '&nbsp; &nbsp; <form action="your_url" method="post"  style = "display: inline-block;"><button draggable="true" noteid="'+val.id+'" ondragstart="drag(event)" type="button" name="name" title = "wyślij" value="value" data-toggle="modal" data-target="#sendNote" class="btn-link" onclick="setUserId('+val.id+')"><span class="glyphicon glyphicon-send"></span></button></form>'+'</td></tr>'+
+                         '&nbsp; &nbsp; <form action="your_url" method="post"  style = "display: inline-block;"><button '+button+' noteid="'+val.id+'" ondragstart="drag(event)" type="button" name="name" title = "wyślij" value="value" data-toggle="modal" data-target="#sendNote" class="btn-link" onclick="setUserId('+val.id+')"><span class="glyphicon glyphicon-send"></span></button></form>'+'</td></tr>'+
                 '</table>');
             // }
             // else if (val.type===1)

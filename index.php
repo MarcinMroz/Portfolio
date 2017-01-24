@@ -105,7 +105,7 @@ require_once 'header.php';
                         <input type="text" class="form-control" id="repswReg" placeholder="Powtórz hasło">
                         <div id ="RegPass2" class = "error"></div>
                     </div>
-                    <div class="g-recaptcha" data-sitekey="6LcprRIUAAAAAAmqlJIG00HhUr-Q5x8Iue6p_e8k"></div>
+                    <!--<div class="g-recaptcha" data-sitekey="6LcprRIUAAAAAAmqlJIG00HhUr-Q5x8Iue6p_e8k"></div>-->
                     <br>
                     
                     <button type="button" class="btn btn-default btn-success btn-block" id="regSubmit" ><span class="glyphicon glyphicon-off"></span> Zarejestruj</button>
@@ -257,20 +257,20 @@ require_once 'header.php';
                      error = true;
                     
                 }
-                if($("#repswReg").val()!=$("#pswReg").val())
+                if($("#repswReg").val()!==$("#pswReg").val())
                 {
                     $('#RegPass2').html('Hasła muszą być takie same');
                      error = true;
                 }
                 $.post( "ValidateRegister.php", { user: $('#usrnameReg').val(), email: $('#emailReg').val() })
                     .done(function( data ) {
-                      if(data[0].email==1 ){
+                      if(data[0].email===1 ){
                       $('#RegEmail').html('E-mail już istnieje');
                         error = true;  
                           
                           
                       }
-                      if(data[0].user==1 ){
+                      if(data[0].user===1 ){
                       $('#RegLogin').html('Użytkownik już istnieje');
                         error = true;  
                           
@@ -278,7 +278,7 @@ require_once 'header.php';
                       }
                     });
                 if(error===false){
-                    $.post("rejestrowanie.php", {login: $('#usrnameReg').val(), email: $('#emailReg').val(), pass: $("#pswReg").val(), captcha: $("#g-recaptcha-response")});
+                    $.post("rejestrowanie.php", {login: $('#usrnameReg').val(), email: $('#emailReg').val(), pass: $("#pswReg").val()/*, captcha: $("#g-recaptcha-response")*/});
                     $("#register .close").click();
                     var IndexCt=$('.row').find('p');
                     var oldCt = $(IndexCt).html();
